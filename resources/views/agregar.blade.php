@@ -1,7 +1,8 @@
 @extends('layouts.plantilla')
 
 @section('form')
-<form action="/guardar" method="POST" enctype="multipart/form-data" class="form-control form-agregar">
+<div class="container-sm bg-dark text-dark p-3 rounded text-center d-flex justify-content-center align-items-center min-vh-100">
+ <form action="/guardar" method="POST" enctype="multipart/form-data" class="form-control form-agregar">
     @csrf
     @if ($errors->any())
             <div class="alert alert-danger" role="alert">
@@ -59,5 +60,6 @@
         <button type="submit" class="btn btn-success">Guardar</button>
     </center>
 
-</form>
+ </form>
+</div>
 @endsection

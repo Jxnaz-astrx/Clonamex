@@ -1,7 +1,8 @@
 @extends('layouts.plantilla')
 
 @section('form')
-<form action="{{route('actualizar', $pelicula)}}" method="POST" enctype="multipart/form-data" class="form-control">
+<div class="container-sm bg-dark text-dark p-3 rounded text-center d-flex justify-content-center align-items-center min-vh-100">
+ <form action="{{route('actualizar', $pelicula)}}" method="POST" enctype="multipart/form-data" class="form-control">
     @csrf
     @method('PUT')
     @if ($errors->any())
@@ -60,5 +61,6 @@
         <button type="submit" class="btn btn-success">Actualizar</button>
     </center>
 
-</form>
+ </form>
+</div>
 @endsection
