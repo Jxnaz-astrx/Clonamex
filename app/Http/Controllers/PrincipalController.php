@@ -211,22 +211,22 @@ class PrincipalController extends Controller
     return view('peliculas', compact('peliculas'));
     }
 
-    public function ordenar_2 ($orden2)
-    {
-        switch($orden2)
-        {
-            case 'nombre':
-                $actores = Actores::orderBy('nombre', 'asc')->paginate(2);
-                break;
-                $actores = Actores::orderBy('nombre2', 'desc')->paginate(2);
-                break;
-                default:
-                    $actores = Actores::paginate(2);
-                    break;
-        }
-        return view('actores', compact('actores'));
-
+    public function ordenar_2($orden2)
+{
+    switch ($orden2) {
+        case 'nombre':
+            $actores = Actores::orderBy('nombre', 'asc')->paginate(3);
+            break;
+        case 'nombre2':
+            $actores = Actores::orderBy('nombre', 'desc')->paginate(3);
+            break;
+        default:
+            $actores = Actores::paginate(3);
+            break;
     }
+    return view('actores', compact('actores'));
+}
+
 
 
 }
