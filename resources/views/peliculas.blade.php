@@ -6,9 +6,9 @@
         <a href="{{route('agregar')}}" class="btn btn-primary zoom">Agregar</a>
         <center>
             <h4 style="color: white;">Ordenar</h4>
-            <a href="{{route('ordenar','nombre')}}"><button type="button" class="btn btn-secondary">A-Z</button></a>
+            <a href="{{route('ordenar','nombre')}}"><button type="button" class="btn btn-secondary btn btn-primary zoom">A-Z</button></a>
 
-            <a href="{{route('ordenar','nombre2')}}"><button type="button" class="btn btn-secondary">Z-A</button></a>
+            <a href="{{route('ordenar','nombre2')}}"><button type="button" class="btn btn-secondary btn btn-primary zoom">Z-A</button></a>
         </center>
 
     </div>
